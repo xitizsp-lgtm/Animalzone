@@ -1,3 +1,7 @@
+// BugDex server: serves the game and forwards identification/market requests to an AI service.
+// Free option: Google Gemini (set GEMINI_API_KEY). Paid option: Claude (set ANTHROPIC_API_KEY).
+// Keys stay here on the server (environment variables), never in the page.
+const express = require('express');
 const app = express();
 app.set('trust proxy', 1);
 app.use(express.json({ limit: '8mb' }));
